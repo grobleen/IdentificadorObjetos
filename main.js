@@ -24,6 +24,8 @@ var synth=window.speechSynthesis;
 speak_data = "elobjetodetectadoes"+results[0].label;
 var utterThis=new SpeechSynthesisUtterance(speak_data);
 synth.speak(utterThis);
+document.getElementById("resultado_objeto").innerHTML=results[0].label;
+document.getElementById("resultado_presicion").innerHTML=results[0].confidence.toFixed(3);
 }
 }
 }
